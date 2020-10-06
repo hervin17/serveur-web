@@ -32,9 +32,7 @@
     state: absent
   notify: restart apache
 
-- name: depo du fuchier sur le serveur
+- name: depo du code  sur le serveur
   git:
-    repo: https://github.com/hervin17/test
+    repo: https://github.com/hervin17/serveur-web/blob/main/test.php
     dest: "{{ serv_path }}"
-  notify: restart apache
-  tags: deploi1
